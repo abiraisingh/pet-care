@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Care - Virtual Pet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: aqua;
+            color: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        nav .logo img {
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 50px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        nav input[type="text"] {
+            padding: 8px;
+            width: 250px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px 0;
+        }
+
+        #dog-care {
+            background: beige;
+            color: black;
+            padding: 50px;
+            text-align: center;
+        }
+
+        #dog-care h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .dog-info {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .dog-info div {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 45%;
+        }
+
+        .dog-info div img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .dog-info div h3 {
+            margin-top: 15px;
+            font-size: 1.5rem;
+        }
+
+        .dog-info div p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .dog-breeds, #dog-food {
+            padding: 20px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .dog-breeds h2, #dog-food h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .breeds-list {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .breed-category {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            width: 30%;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .breed-category img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        table th {
+            background-color: #f4f4f4;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            .dog-info div, .breed-category {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+            }
+
+            nav input[type="text"] {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav a {
+                padding: 5px;
+            }
+
+            #dog-care h1 {
+                font-size: 1.5rem;
+            }
+
+            table {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="logo11.jpg" alt="Logo">
+        </div>
+        <div>
+            <a href="#dog-care">Home</a>
+            <a href="index.html#about-us">About Us</a>
+        </div>
+        <input type="text" placeholder="Search dogs...">
+    </nav>
+
+    <section id="dog-care">
+        <h1>How to Take Care of Your Dog</h1>
+        <div class="dog-info">
+            <div>
+                <img src="nutrition.webp" alt="Healthy Dog">
+                <h3>Proper Nutrition</h3>
+                <p>Provide your dog with high-quality dog food to ensure their health and well-being.</p>
+            </div>
+            <div>
+                <img src="playing-dog.jpg" alt="Dog Playtime">
+                <h3>Exercise & Play</h3>
+                <p>Engage your dog with activities and regular walks to keep them active and happy.</p>
+            </div>
+        </div>
+        <div class="dog-info">
+            <div>
+                <img src="grooming-dog.jpg" alt="Dog Grooming">
+                <h3>Grooming & Hygiene</h3>
+                <p>Regular grooming helps maintain a clean and healthy coat. Bathe your dog, trim their nails, and brush their fur regularly.</p>
+            </div>
+            <div>
+                <img src="training-dog.jpg" alt="Dog Training">
+                <h3>Training & Socialization</h3>
+                <p>Training your dog is important for their behavior. Socialization with other pets and people is also essential for a well-adjusted dog.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="dog-breeds" class="dog-breeds">
+        <h2>Popular Dog Breeds</h2>
+        <div class="breeds-list">
+            <div class="breed-category">
+                <img src="bulldog.jpg" alt="Bulldog">
+                <h3>Bulldog</h3>
+                <p>Bulldogs are known for their calm temperament and are great family pets.</p>
+            </div>
+            <div class="breed-category">
+                <img src="labrador.avif" alt="Labrador">
+                <h3>Labrador Retriever</h3>
+                <p>Labradors are friendly, energetic, and great for active families.</p>
+            </div>
+            <div class="breed-category">
+                <img src="beagle.avif" alt="Beagle">
+                <h3>Beagle</h3>
+                <p>Beagles are small, friendly, and have a great sense of smell. They make excellent pets.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="dog-food">
+        <h2>Dog Food Guide</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Foods Good for Dogs</th>
+                    <th>Foods NOT Good for Dogs</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cooked chicken, turkey, and lean beef</td>
+                    <td>Chocolate and caffeinated drinks</td>
+                </tr>
+                <tr>
+                    <td>Plain, cooked sweet potatoes</td>
+                    <td>Onions, garlic, and chives</td>
+                </tr>
+                <tr>
+                    <td>Small amounts of peanut butter</td>
+                    <td>Grapes and raisins</td>
+                </tr>
+                <tr>
+                    <td>Carrots and green beans</td>
+                    <td>Raw dough and alcohol</td>
+                </tr>
+                <tr>
+                    <td>High-quality commercial dog food</td>
+                    <td>Avocado</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Virtual Pet. All rights reserved.</p>
+    </footer>
+</body>
+</html>

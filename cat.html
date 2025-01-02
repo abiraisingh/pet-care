@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Care - Virtual Pet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: aqua;
+            color: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        nav .logo img {
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 50px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        nav input[type="text"] {
+            padding: 8px;
+            width: 250px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px 0;
+        }
+
+        #cat-care {
+            background: beige;
+            color: black;
+            padding: 50px;
+            text-align: center;
+        }
+
+        #cat-care h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .cat-info {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cat-info div {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 45%;
+        }
+
+        .cat-info div img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .cat-info div h3 {
+            margin-top: 15px;
+            font-size: 1.5rem;
+        }
+
+        .cat-info div p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .cat-breeds, #cat-food {
+            padding: 20px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .cat-breeds h2, #cat-food h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .breeds-list {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .breed-category {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            width: 30%;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .breed-category img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        table th {
+            background-color: #f4f4f4;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            .cat-info div, .breed-category {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="logo11.jpg" alt="Logo">
+        </div>
+        <div>
+            <a href="#cat-care">Home</a>
+            <a href="index.html#about-us">About Us</a>
+        </div>
+        <input type="text" placeholder="Search cats...">
+    </nav>
+
+    <section id="cat-care">
+        <h1>How to Take Care of Your Cat</h1>
+        <div class="cat-info">
+            <div>
+                <img src="CatNutrition.jpg" alt="Healthy Cat">
+                <h3>Proper Nutrition</h3>
+                <p>Provide your cat with high-quality cat food to ensure their health and well-being.</p>
+            </div>
+            <div>
+                <img src="catplaytime.jpg" alt="Cat Playtime">
+                <h3>Exercise & Play</h3>
+                <p>Engage your cat with toys and activities to keep them active and mentally stimulated.</p>
+            </div>
+        </div>
+        <div class="cat-info">
+            <div>
+                <img src="grooming-cat.jpg" alt="Cat Grooming">
+                <h3>Grooming</h3>
+                <p>Regularly brush your cat’s fur and maintain their hygiene to keep them comfortable and healthy.</p>
+            </div>
+            <div>
+                <img src="cat-training.png" alt="Cat Training">
+                <h3>Training & Care</h3>
+                <p>Train your cat with positive reinforcement and create a safe environment for them.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cat-breeds" class="cat-breeds">
+        <h2>Popular Cat Breeds</h2>
+        <div class="breeds-list">
+            <div class="breed-category">
+                <img src="persian-cat.jpg" alt="Persian Cat">
+                <h3>Persian</h3>
+                <p>Persian cats are known for their long fur and affectionate nature.</p>
+            </div>
+            <div class="breed-category">
+                <img src="mainecoon.jpg" alt="Maine Coon">
+                <h3>Maine Coon</h3>
+                <p>Maine Coons are large, friendly cats with luxurious fur.</p>
+            </div>
+            <div class="breed-category">
+                <img src="siamese.png" alt="Siamese Cat">
+                <h3>Siamese</h3>
+                <p>Siamese cats are vocal, affectionate, and highly intelligent.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cat-food">
+        <h2>Cat Food Guide</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Foods Good for Cats</th>
+                    <th>Foods NOT Good for Cats</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cooked chicken, turkey, and fish</td>
+                    <td>Chocolate and caffeinated drinks</td>
+                </tr>
+                <tr>
+                    <td>Plain, cooked eggs</td>
+                    <td>Onions, garlic, and chives</td>
+                </tr>
+                <tr>
+                    <td>Small portions of cheese</td>
+                    <td>Raw meat and bones</td>
+                </tr>
+                <tr>
+                    <td>Cat-friendly vegetables like carrots</td>
+                    <td>Grapes and raisins</td>
+                </tr>
+                <tr>
+                    <td>High-quality commercial cat food</td>
+                    <td>Alcohol and raw dough</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Virtual Pet. All rights reserved.</p>
+    </footer>
+</body>
+</html>
