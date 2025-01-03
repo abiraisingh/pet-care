@@ -205,8 +205,11 @@
         <div>
             <a href="#dog-care">Home</a>
             <a href="index.html#about-us">About Us</a>
-        </div>
-        <input type="text" placeholder="Search dogs...">
+            </div>
+            <div>
+                <input type="text" id="search" placeholder="Search for a pet...">
+                <button onclick="searchPet()">Search</button>
+            </div>
     </nav>
 
     <section id="dog-care">
@@ -292,6 +295,13 @@
         </table>
     </section>
 
+    <script>
+        function searchPet() {
+            const query = document.getElementById('search').value;
+            // Redirect to results.html with the search query
+            window.location.href = `results.html?q=${encodeURIComponent(query)}`;
+        }
+    </script>
     <footer>
         <p>&copy; 2025 Virtual Pet. All rights reserved.</p>
     </footer>

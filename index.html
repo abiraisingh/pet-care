@@ -368,6 +368,10 @@
             <a href="#games">Games</a>
             <a href="#about">About Us</a>
         </div>
+        <div>
+            <input type="text" id="search" placeholder="Search for a pet...">
+            <button onclick="searchPet()">Search</button>
+        </div>
     </nav>
 
     <section id="home">
@@ -433,6 +437,14 @@
             </div>
         </div>
     </section>
+    
+    <script>
+        function searchPet() {
+            const query = document.getElementById('search').value;
+            // Redirect to results.html with the search query
+            window.location.href = `results.html?q=${encodeURIComponent(query)}`;
+        }
+    </script>
 
     <footer>
         <p>© 2025 Virtual Pet. All rights reserved.</p>
