@@ -1,0 +1,122 @@
+[
+    {
+        "breed": "Bulldog",
+        "description": "A calm and friendly bulldog who loves to lounge around.",
+        "foods_likes": ["Chicken", "Beef", "Carrots"],
+        "foods_dislikes": ["Chocolate", "Onions"],
+        "activities": ["Short walks", "Cuddling", "Playing with toys"],
+        "image": "bulldog.jpg"
+    },
+    {
+        "breed": "Persian",
+        "description": "A gentle Persian cat with a fluffy coat and a sweet personality.",
+        "foods_likes": ["Fish", "Chicken", "Catnip"],
+        "foods_dislikes": ["Citrus fruits", "Onions"],
+        "activities": ["Napping", "Grooming", "Playing with strings"],
+        "image": "persian-cat.jpg"
+    },
+    {
+        "breed": "Labrador",
+        "description": "An energetic Labrador who loves to play fetch and swim.",
+        "foods_likes": ["Chicken", "Peanut butter", "Carrots"],
+        "foods_dislikes": ["Grapes", "Chocolate"],
+        "activities": ["Fetching balls", "Swimming", "Running"],
+        "image": "labrador.avif"
+    },
+    {
+        "breed": "Siamese",
+        "description": "A vocal Siamese cat who loves to interact with her humans.",
+        "foods_likes": ["Tuna", "Chicken", "Cat treats"],
+        "foods_dislikes": ["Dairy", "Chocolate"],
+        "activities": ["Playing with toys", "Climbing", "Cuddling"],
+        "image": "siamese.png"
+    },
+    {
+        "breed": "Beagle",
+        "description": "A small, friendly dog with a great sense of smell and a curious nature.",
+        "foods_likes": ["Chicken", "Fish", "Carrots"],
+        "foods_dislikes": ["Chocolate", "Onions"],
+        "activities": ["Sniffing around", "Playing fetch", "Going for walks"],
+        "image": "beagle.avif"
+    },
+    {
+        "breed": "Maine Coon",
+        "description": "A large, friendly cat with luxurious fur and a playful personality.",
+        "foods_likes": ["Chicken", "Fish", "Cat treats"],
+        "foods_dislikes": ["Citrus fruits", "Onions"],
+        "activities": ["Playing with toys", "Climbing", "Cuddling"],
+        "image": "mainecoon.jpg"
+    },
+    {
+        "breed": "Golden Retriever",
+        "description": "An intelligent and friendly dog, known for their loyalty and playful nature.",
+        "foods_likes": ["Chicken", "Peanut butter", "Carrots"],
+        "foods_dislikes": ["Grapes", "Chocolate"],
+        "activities": ["Fetching balls", "Swimming", "Running"],
+        "image": "goldenretriever.jpg"
+    },
+    {
+        "breed": "Ragdoll",
+        "description": "A docile and calm cat, known for their affectionate nature.",
+        "foods_likes": ["Fish", "Chicken", "Cat treats"],
+        "foods_dislikes": ["Dairy", "Chocolate"],
+        "activities": ["Napping", "Cuddling", "Playing with strings"],
+        "image": "ragdoll.jpg"
+    },
+    {
+        "breed": "Poodle",
+        "description": "A highly intelligent and trainable dog, known for their hypoallergenic coats.",
+        "foods_likes": ["Chicken", "Fish", "Carrots"],
+        "foods_dislikes": ["Grapes", "Chocolate"],
+        "activities": ["Agility training", "Fetching", "Swimming"],
+        "image": "poodle.jpg"
+    },
+    {
+        "breed": "Bengal",
+        "description": "An energetic cat known for their striking appearance and playful nature.",
+        "foods_likes": ["Chicken", "Fish", "Cat treats"],
+        "foods_dislikes": ["Dairy", "Chocolate"],
+        "activities": ["Climbing", "Playing with toys", "Exploring"],
+        "image": "bengal.jpg"
+    },
+    {
+        "breed": "Shih Tzu",
+        "description": "An affectionate and friendly dog, known for their long, flowing coats.",
+        "foods_likes": ["Chicken", "Beef", "Carrots"],
+        "foods_dislikes": ["Chocolate", "Onions"],
+        "activities": ["Short walks", "Cuddling", "Playing with toys"],
+        "image": "shihtzu.jpg"
+    },
+    {
+        "breed": "Scottish Fold",
+        "description": "A cat known for its unique folded ears and sweet temperament.",
+        "foods_likes": ["Fish", "Chicken", "Cat treats"],
+        "foods_dislikes": ["Citrus fruits", "Onions"],
+        "activities": ["Napping", "Playing with strings", "Cuddling"],
+        "image": "scottishfold.jpg"
+    },
+    {
+        "breed": "Cocker Spaniel",
+        "description": "A friendly and gentle dog, great with children and families.",
+        "foods_likes": ["Chicken", "Beef", "Carrots"],
+        "foods_dislikes": ["Chocolate", "Grapes"],
+        "activities": ["Fetching balls", "Going for walks", "Playing with children"],
+        "image": "cocker_spaniel.jpg"
+    },
+    {
+        "breed": "Rottweiler",
+        "description": "A confident and fearless dog, known for their loyalty and protective nature.",
+        "foods_likes": ["Beef", "Chicken", "Carrots"],
+        "foods_dislikes": ["Chocolate", "Onions"],
+        "activities": ["Running", "Playing fetch", "Guarding"],
+        "image": "rottweiler.jpg"
+    },
+    {
+        "breed": "British Shorthair",
+        "description": "A cat known for its dense coat and calm demeanor, making it a great companion.",
+        "foods_likes": ["Fish", "Chicken", "Cat treats"],
+        "foods_dislikes": ["Dairy", "Chocolate"],
+        "activities": ["Napping", "Playing with toys", "Cuddling"],
+        "image": "britishshorthair.jpg"
+    }
+]

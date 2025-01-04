@@ -1,0 +1,28 @@
+<!-- redirect.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Device Redirect</title>
+  <script>
+    // Function to check if the user is on a mobile device
+    function detectDevice() {
+      var isMobile = /Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+      
+      // Redirect to the appropriate page
+      if (isMobile) {
+        window.location.href = "index1.html";  // Redirect to mobile version
+      } else {
+        window.location.href = "index.html";   // Redirect to PC version
+      }
+    }
+
+    // Call the detectDevice function as soon as the page loads
+    window.onload = detectDevice;
+  </script>
+</head>
+<body>
+  <!-- Content of the main page is not needed because JavaScript handles the redirection -->
+</body>
+</html>

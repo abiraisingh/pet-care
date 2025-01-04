@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        #results {
+            margin-top: 20px;
+        }
+        .pet {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .pet img {
+            width: 200px;
+            height: auto;
+        }
+        .pet h3 {
+            margin: 0;
+        }
+        .pet p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <div id="results"></div>
+
+    <script>
+        // Get the search query from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('q');
+
+        // Fetch search results from the backend
+        fetch(`http://localhost:5000/search?q=${query}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const resultsDiv = document.getElementById('results');
+                if (data.length === 0) {
+                    resultsDiv.innerHTML = '<p>No results found.</p>';
+                } else {
+                    data.forEach(pet => {
+                        resultsDiv.innerHTML += `
+                            <div class="pet">
+                                <h3>Breed: ${pet.breed}</h3>
+                                <p>Description: ${pet.description}</p>
+                                <p>Foods They Like: ${pet.foods_likes.join(', ')}</p>
+                                <p>Foods They Don't Like: ${pet.foods_dislikes.join(', ')}</p>
+                                <p>Activities They Enjoy: ${pet.activities.join(', ')}</p>
+                                <img src="${pet.image}" alt="${pet.breed}" />
+                            </div>
+                        `;
+                    });
+                }
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    </script>
+</body>
+</html>
