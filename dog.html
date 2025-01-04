@@ -163,13 +163,14 @@
                 margin-bottom: 20px;
             }
 
-            nav {
-                flex-wrap: wrap;
+            .navbar{
+                display: flex;
             }
-
-            nav input[type="text"] {
-                width: 100%;
-                margin-top: 10px;
+            .navbar .search input{
+                width: 100px;
+            }
+            .navbar .search button{
+                height: 25px;
             }
 
             table {
@@ -198,7 +199,7 @@
     </style>
 </head>
 <body>
-    <nav>
+    <nav class="navbar">
         <div class="logo">
             <img src="logo11.jpg" alt="Logo">
         </div>
@@ -206,7 +207,7 @@
             <a href="#dog-care">Home</a>
             <a href="index.html#about-us">About Us</a>
             </div>
-            <div>
+            <div class="search">
                 <input type="text" id="search" placeholder="Search for a pet...">
                 <button onclick="searchPet()">Search</button>
             </div>

@@ -26,6 +26,12 @@
             max-height: 200px;
             object-fit: cover;
         }
+
+        #about .card img{
+            max-width: 200px;
+            max-height: 200px;
+            object-fit: cover;
+        }
         footer {
             background-color: #333;
             color: white;
@@ -58,10 +64,17 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#about">About Us</a>
                         </li>
+                        <li>
+                            <div>
+                                <input type="text" id="search" placeholder="Search for a pet...">
+                                <button onclick="searchPet()">Search</button>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
+        <hr>
         <div class="bg-info text-center py-3" id="home">
             <h1>Virtual Pet</h1>
             <p>Learn how to take care of your pets</p>
@@ -98,7 +111,7 @@
                 </div>
             </div>
         </section>
-
+        <hr>
         <section id="games">
             <div class="mt-5">
                 <h2>Virtual Pet Games</h2>
@@ -115,50 +128,40 @@
                         </div>
                     </div>
         </section>
-
+        <hr>
         <section id="about" class="mt-5">
             <h2>About Us</h2>
             <div class="row g-4">
-                <div class="col-md-4">
+                <div class="col-6">
                     <div class="card">
                         <img src="profile1.jpg" class="card-img-top" alt="Team Member 1">
                         <div class="card-body">
-                            <h5 class="card-title">Abirai Singh</h5>
+                            <h5 class="card-title"><b>Abirai Singh</b></h5>
                             <p class="card-text">Lead Developer</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-6">
                     <div class="card">
-                        <img src="team2.jpg" class="card-img-top" alt="Team Member 2">
+                        <img src="profile2.avif" class="card-img-top" alt="Team Member 2">
                         <div class="card-body">
-                            <h5 class="card-title">B Manisha</h5>
-                            <p class="card-text">Lead Developer</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="team3.jpg" class="card-img-top" alt="Team Member 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Anjal Regmi</h5>
-                            <p class="card-text">Graphic Designer</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="team4.jpg" class="card-img-top" alt="Team Member 4">
-                        <div class="card-body">
-                            <h5 class="card-title">Deepthi Surya</h5>
-                            <p class="card-text">Graphic Designer</p>
+                            <h5 class="card-title"><b>Pranav Pathania</b></h5>
+                            <p class="card-text">Game Developer</p>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </section>
     </main>
 
+ <script>
+        function searchPet() {
+            const query = document.getElementById('search').value;
+            // Redirect to results.html with the search query
+            window.location.href = `results.html?q=${encodeURIComponent(query)}`;
+        }
+    </script>
     <footer>
         <p>&copy; 2025 Virtual Pet. All rights reserved.</p>
     </footer>
