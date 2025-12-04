@@ -30,12 +30,15 @@ This is a simple static website to provide pet-care information — such as tips
 ---
 
 ## 📂 Project Structure
+```
+
 pet-care/
 │── index.html
 │── styles.css
 │── assets/ # optional: images, icons, etc.
 └── README.md
 
+```
 
 - **index.html** — The main HTML file that contains all sections/web pages.  
 - **styles.css** — The CSS file for layout, typography, colors, and responsiveness.  
