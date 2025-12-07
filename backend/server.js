@@ -2,18 +2,14 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const fs = require('fs');
-const path = require('path');
 
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-// Updated path to pets.json inside 'backend' folder
-const petsFilePath = path.join(__dirname, 'backend', 'pets.json');
-
-// Load pet data from the JSON file
+// Load pet data from JSON file
 let pets = [];
-fs.readFile(petsFilePath, 'utf8', (err, data) => {
+fs.readFile('pets.json', 'utf8', (err, data) => {
     if (err) {
         console.error('Error reading pets data:', err);
         return;

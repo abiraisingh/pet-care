@@ -1,310 +1,295 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dog Care - Virtual Pet</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav {
-            background-color: aqua;
-            color: white;
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-
-        nav .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        nav .logo img {
-            height: 40px;
-            margin-right: 10px;
-            border-radius: 50px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-        }
-
-        nav a:hover {
-            background-color: #575757;
-            border-radius: 5px;
-        }
-
-        nav input[type="text"] {
-            padding: 8px;
-            width: 250px;
-            border-radius: 5px;
-            border: none;
-            outline: none;
-        }
-
-        section {
-            padding: 20px;
-            margin: 10px 0;
-        }
-
-        #dog-care {
-            background: beige;
-            color: black;
-            padding: 50px;
-            text-align: center;
-        }
-
-        #dog-care h1 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        .dog-info {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .dog-info div {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 45%;
-        }
-
-        .dog-info div img {
-            width: 100%;
-            border-radius: 8px;
-        }
-
-        .dog-info div h3 {
-            margin-top: 15px;
-            font-size: 1.5rem;
-        }
-
-        .dog-info div p {
-            font-size: 1rem;
-            color: #555;
-        }
-
-        .dog-breeds, #dog-food {
-            padding: 20px;
-            text-align: center;
-            background-color: #f9f9f9;
-        }
-
-        .dog-breeds h2, #dog-food h2 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-        }
-
-        .breeds-list {
-            display: flex;
-            justify-content: space-around;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .breed-category {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            width: 30%;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .breed-category img {
-            width: 100%;
-            border-radius: 8px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            text-align: left;
-        }
-
-        table th, table td {
-            border: 1px solid #ddd;
-            padding: 10px;
-        }
-
-        table th {
-            background-color: #f4f4f4;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: relative;
-        }
-
-        @media (max-width: 768px) {
-            .dog-info div, .breed-category {
-                width: 100%;
-                margin-bottom: 20px;
-            }
-
-            .navbar{
-                display: flex;
-            }
-            .navbar .search input{
-                width: 100px;
-            }
-            .navbar .search button{
-                height: 25px;
-            }
-
-            table {
-                font-size: 14px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            nav {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            nav a {
-                padding: 5px;
-            }
-
-            #dog-care h1 {
-                font-size: 1.5rem;
-            }
-
-            table {
-                font-size: 12px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <nav class="navbar">
-        <div class="logo">
-            <img src="logo11.jpg" alt="Logo">
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Pet • Dog Care</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Shared Navbar -->
+    <header class="navbar">
+      <div class="navbar-inner">
+        <div class="logo-area">
+          <img src="logo11.jpg" alt="Virtual Pet Logo" />
+          <div class="logo-text">
+            <span>Virtual Pet</span>
+            <span>Dog Care</span>
+          </div>
         </div>
-        <div>
-            <a href="#dog-care">Home</a>
-            <a href="index.html#about-us">About Us</a>
-            </div>
-            <div class="search">
-                <input type="text" id="search" placeholder="Search for a pet...">
-                <button onclick="searchPet()">Search</button>
-            </div>
-    </nav>
 
-    <section id="dog-care">
-        <h1>How to Take Care of Your Dog</h1>
-        <div class="dog-info">
-            <div>
-                <img src="nutrition.webp" alt="Healthy Dog">
-                <h3>Proper Nutrition</h3>
-                <p>Provide your dog with high-quality dog food to ensure their health and well-being.</p>
-            </div>
-            <div>
-                <img src="playing-dog.jpg" alt="Dog Playtime">
-                <h3>Exercise & Play</h3>
-                <p>Engage your dog with activities and regular walks to keep them active and happy.</p>
-            </div>
-        </div>
-        <div class="dog-info">
-            <div>
-                <img src="grooming-dog.jpg" alt="Dog Grooming">
-                <h3>Grooming & Hygiene</h3>
-                <p>Regular grooming helps maintain a clean and healthy coat. Bathe your dog, trim their nails, and brush their fur regularly.</p>
-            </div>
-            <div>
-                <img src="training-dog.jpg" alt="Dog Training">
-                <h3>Training & Socialization</h3>
-                <p>Training your dog is important for their behavior. Socialization with other pets and people is also essential for a well-adjusted dog.</p>
-            </div>
-        </div>
-    </section>
+        <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">
+          ☰
+        </button>
 
-    <section id="dog-breeds" class="dog-breeds">
-        <h2>Popular Dog Breeds</h2>
-        <div class="breeds-list">
-            <div class="breed-category">
-                <img src="bulldog.jpg" alt="Bulldog">
-                <h3>Bulldog</h3>
-                <p>Bulldogs are known for their calm temperament and are great family pets.</p>
-            </div>
-            <div class="breed-category">
-                <img src="labrador.avif" alt="Labrador">
-                <h3>Labrador Retriever</h3>
-                <p>Labradors are friendly, energetic, and great for active families.</p>
-            </div>
-            <div class="breed-category">
-                <img src="beagle.avif" alt="Beagle">
-                <h3>Beagle</h3>
-                <p>Beagles are small, friendly, and have a great sense of smell. They make excellent pets.</p>
-            </div>
-        </div>
-    </section>
+        <nav class="nav-links" id="navLinks">
+          <a href="index.html#home">Home</a>
+          <a href="index.html#games">Games</a>
+          <a href="dog.html" class="active">Dog Care</a>
+          <a href="cat.html">Cat Care</a>
+          <a href="index.html#about">About</a>
+        </nav>
 
-    <section id="dog-food">
-        <h2>Dog Food Guide</h2>
-        <table>
-            <thead>
+        <div class="nav-right">
+          <div class="nav-search" id="navSearch">
+            <input
+              type="text"
+              id="search"
+              placeholder="Search for a pet…"
+              autocomplete="off"
+            />
+            <button type="button" onclick="searchPet()">
+              🔍 <span>Search</span>
+            </button>
+          </div>
+
+          <button class="theme-toggle" type="button" id="themeToggle">
+            <span id="themeIcon">🌙</span>
+            <span>Theme</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <!-- Dog hero -->
+        <section class="hero-pet reveal">
+          <div class="hero-pet-main">
+            <h1 class="hero-pet-title">How to take care of your dog</h1>
+            <p class="hero-pet-text">
+              From daily walks to safe food choices, this guide helps you keep
+              your dog healthy, active, and emotionally happy.
+            </p>
+            <div class="hero-pet-badges">
+              <span class="hero-pet-badge">Daily routine</span>
+              <span class="hero-pet-badge">Food do’s & don’ts</span>
+              <span class="hero-pet-badge">Exercise & training</span>
+            </div>
+          </div>
+          <img
+            src="nutrition.webp"
+            alt="Healthy Dog"
+            class="hero-pet-img"
+          />
+        </section>
+
+        <!-- Care fundamentals -->
+        <section class="section">
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">Essentials</div>
+              <h2 class="section-title">Dog care fundamentals</h2>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <article class="card reveal">
+              <img
+                src="nutrition.webp"
+                alt="Dog nutrition"
+                class="tile-image"
+              />
+              <div class="card-tag">🍽️ Proper nutrition</div>
+              <h3 class="card-title">Feed complete & balanced meals</h3>
+              <p class="card-text">
+                Provide your dog with high-quality commercial dog food, and
+                avoid overfeeding treats. Fresh water should always be
+                available.
+              </p>
+            </article>
+
+            <article class="card reveal">
+              <img
+                src="playing-dog.jpg"
+                alt="Dog playing"
+                class="tile-image"
+              />
+              <div class="card-tag">🎾 Exercise & play</div>
+              <h3 class="card-title">Daily activity keeps them happy</h3>
+              <p class="card-text">
+                Take your dog for regular walks and play fetch or tug. Physical
+                and mental exercise prevent boredom and destructive behaviour.
+              </p>
+            </article>
+          </div>
+
+          <div class="grid-2" style="margin-top: 1.25rem">
+            <article class="card reveal">
+              <img
+                src="grooming-dog.jpg"
+                alt="Dog grooming"
+                class="tile-image"
+              />
+              <div class="card-tag">🧼 Grooming & hygiene</div>
+              <h3 class="card-title">Keep the coat and skin healthy</h3>
+              <p class="card-text">
+                Brush your dog’s fur regularly, bathe them when needed, and
+                trim nails carefully. Check ears, teeth and paws for any signs
+                of irritation or infection.
+              </p>
+            </article>
+
+            <article class="card reveal">
+              <img
+                src="training-dog.jpg"
+                alt="Dog training"
+                class="tile-image"
+              />
+              <div class="card-tag">🦴 Training & socialization</div>
+              <h3 class="card-title">Positive reinforcement works best</h3>
+              <p class="card-text">
+                Train your dog using rewards and patience. Socialize with
+                people, other dogs and new environments to build confidence and
+                reduce anxiety.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Popular breeds -->
+        <section class="section">
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">Breeds</div>
+              <h2 class="section-title">Popular dog breeds</h2>
+            </div>
+          </div>
+
+          <div class="grid-3">
+            <article class="card breed-card reveal">
+              <img src="bulldog.jpg" alt="Bulldog" class="tile-image" />
+              <h4>Bulldog</h4>
+              <p>
+                Calm, gentle and great for families. Bulldogs don’t need intense
+                exercise, but do need regular health check-ups.
+              </p>
+            </article>
+
+            <article class="card breed-card reveal">
+              <img
+                src="labrador.avif"
+                alt="Labrador Retriever"
+                class="tile-image"
+              />
+              <h4>Labrador Retriever</h4>
+              <p>
+                Energetic, friendly and excellent with kids. Labs love swimming
+                and fetch, and need plenty of daily activity.
+              </p>
+            </article>
+
+            <article class="card breed-card reveal">
+              <img src="beagle.avif" alt="Beagle" class="tile-image" />
+              <h4>Beagle</h4>
+              <p>
+                Curious and playful, with a strong sense of smell. Beagles enjoy
+                walks, tracking scents, and interactive play.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Food guide -->
+        <section class="section">
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">Food guide</div>
+              <h2 class="section-title">What dogs can and can’t eat</h2>
+            </div>
+          </div>
+
+          <div class="table-wrapper reveal">
+            <table>
+              <thead>
                 <tr>
-                    <th>Foods Good for Dogs</th>
-                    <th>Foods NOT Good for Dogs</th>
+                  <th>Foods good for dogs</th>
+                  <th>Foods not safe for dogs</th>
                 </tr>
-            </thead>
-            <tbody>
+              </thead>
+              <tbody>
                 <tr>
-                    <td>Cooked chicken, turkey, and lean beef</td>
-                    <td>Chocolate and caffeinated drinks</td>
-                </tr>
-                <tr>
-                    <td>Plain, cooked sweet potatoes</td>
-                    <td>Onions, garlic, and chives</td>
+                  <td>Cooked chicken, turkey and lean beef</td>
+                  <td>Chocolate and caffeinated drinks</td>
                 </tr>
                 <tr>
-                    <td>Small amounts of peanut butter</td>
-                    <td>Grapes and raisins</td>
+                  <td>Plain, cooked sweet potatoes</td>
+                  <td>Onions, garlic and chives</td>
                 </tr>
                 <tr>
-                    <td>Carrots and green beans</td>
-                    <td>Raw dough and alcohol</td>
+                  <td>Small amounts of unsalted peanut butter</td>
+                  <td>Grapes and raisins</td>
                 </tr>
                 <tr>
-                    <td>High-quality commercial dog food</td>
-                    <td>Avocado</td>
+                  <td>Carrots and green beans</td>
+                  <td>Raw dough and alcohol</td>
                 </tr>
-            </tbody>
-        </table>
-    </section>
+                <tr>
+                  <td>High-quality commercial dog food</td>
+                  <td>Avocado and foods with xylitol</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <span>© 2025 Virtual Pet. All rights reserved.</span>
+        <span>Dog care made simpler.</span>
+      </div>
+    </footer>
 
     <script>
-        function searchPet() {
-            const query = document.getElementById('search').value;
-            // Redirect to results.html with the search query
-            window.location.href = `results.html?q=${encodeURIComponent(query)}`;
-        }
+      const htmlEl = document.documentElement;
+      const themeToggle = document.getElementById("themeToggle");
+      const themeIcon = document.getElementById("themeIcon");
+
+      function setTheme(theme) {
+        htmlEl.setAttribute("data-theme", theme);
+        themeIcon.textContent = theme === "dark" ? "🌙" : "☀️";
+        localStorage.setItem("vp-theme", theme);
+      }
+
+      const storedTheme = localStorage.getItem("vp-theme");
+      if (storedTheme) setTheme(storedTheme);
+
+      themeToggle.addEventListener("click", () => {
+        const current = htmlEl.getAttribute("data-theme") || "dark";
+        setTheme(current === "dark" ? "light" : "dark");
+      });
+
+      const navToggle = document.getElementById("navToggle");
+      const navLinks = document.getElementById("navLinks");
+      const navSearch = document.getElementById("navSearch");
+
+      navToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+        navSearch.classList.toggle("open");
+      });
+
+      function searchPet() {
+        const q = document.getElementById("search").value.trim();
+        if (!q) return;
+        window.location.href = `results.html?q=${encodeURIComponent(q)}`;
+      }
+      window.searchPet = searchPet;
+
+      const revealEls = document.querySelectorAll(".reveal");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("reveal-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+      revealEls.forEach((el) => observer.observe(el));
     </script>
-    <footer>
-        <p>&copy; 2025 Virtual Pet. All rights reserved.</p>
-    </footer>
-</body>
+  </body>
 </html>
