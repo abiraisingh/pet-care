@@ -925,84 +925,65 @@ html[data-theme="dark"] .result-card {
 }
 
 @media (max-width: 768px) {
+
+  /* NAVBAR LAYOUT FIX */
   .navbar-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-    padding-block: 0.6rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center !important;
+    padding: 0.8rem 1rem;
+    flex-direction: row !important;
   }
 
+  /* Hamburger becomes visible */
   .nav-toggle {
     display: inline-flex;
-    margin-left: auto;
-    font-size: 1.4rem;
   }
 
-  .nav-right {
-    width: 100%;
-    justify-content: flex-start;
-  }
-
-  /* hide menu + search by default */
+  /* Hide links + search initially */
   .nav-links,
   .nav-search {
     display: none;
+    width: 100%;
   }
 
-  /* when hamburger is clicked */
+  /* When menu is opened */
   .nav-links.open,
   .nav-search.open {
     display: flex;
-  }
-
-  .nav-links {
     flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    padding-top: 0.5rem;
-    border-top: 1px solid rgba(148, 163, 184, 0.4);
-    gap: 0.5rem;
+    gap: 0.7rem;
+    padding-top: 0.8rem;
   }
 
   .nav-links a {
     width: 100%;
-    padding: 0.45rem 0;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
   }
 
-  .nav-search {
-    margin-top: 0.6rem;
+  /* Make nav-right (search + theme) stack properly */
+  .nav-right {
     width: 100%;
+    display: none;
   }
 
-  .nav-search input {
-    flex: 1;
-    min-width: 0;
+  .nav-right.open {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
   }
 
-  /* existing layout rules below */
-  .hero {
-    padding-top: 1.75rem;
-  }
-
-  .hero-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-pet {
-    flex-direction: column-reverse;
-    align-items: flex-start;
-  }
-
-  .hero-pet-img {
+  /* Theme button full width */
+  .theme-toggle {
     width: 100%;
-    max-width: 320px;
+    justify-content: center;
   }
 
-  .grid-3,
-  .grid-2 {
-    grid-template-columns: 1fr;
-  }
 }
+
 
 
 @media (max-width: 480px) {

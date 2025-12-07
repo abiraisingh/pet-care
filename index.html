@@ -287,10 +287,11 @@
       const navLinks = document.getElementById("navLinks");
       const navSearch = document.getElementById("navSearch");
 
-      navToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("open");
-        navSearch.classList.toggle("open");
-      });
+     navToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+  navSearch.classList.toggle("open");
+  document.querySelector(".nav-right").classList.toggle("open");
+});
 
       // --- Search redirect ---
       function searchPet() {
